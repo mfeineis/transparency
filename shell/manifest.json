@@ -1,26 +1,36 @@
 {
     "background": {
-        "scripts": [
-            "background.js"
-        ]
+        "page": "background.html"
+        //"scripts": [
+        //    "background.js"
+        //]
     },
     "browser_action": {
         "default_icon": "icon.svg",
         "default_popup": "popup.html",
         "default_title": "Protect your privacy!"
     },
+    //"content_scripts": [
+    //    {
+    //        "matches": ["http://www.google.com/*"],
+    //        "css": ["mystyles.css"],
+    //        "js": ["jquery.js", "myscript.js"]
+    //    }
+    //],
+    //"content_security_policy": "...",
+    //"default_locale": "en",
     "description": "This extension allows the user to change the background color of the current page.",
+    //"icons": {...},
     //"incognito": "split",
 
     "manifest_version": 2,
     "name": "Transparency",
-
     //"options_page": "options.html",
     "permissions": [
-        //"activeTab",
         "cookies",
         "storage",
         "tabs",
+        "unlimitedStorage",
         "webRequest",
         "webRequestBlocking",
         "<all_urls>"
