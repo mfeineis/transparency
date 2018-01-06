@@ -1,0 +1,29 @@
+{
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "icon.svg",
+        "default_popup": "popup.html",
+        "default_title": "Protect your privacy!"
+    },
+    "description": "This extension allows the user to change the background color of the current page.",
+    //"incognito": "split",
+
+    "manifest_version": 2,
+    "name": "Transparency",
+
+    //"options_page": "options.html",
+    "permissions": [
+        //"activeTab",
+        "cookies",
+        "storage",
+        "tabs",
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>"
+    ],
+    "version": "0.1.0"
+}

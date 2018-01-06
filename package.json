@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "name": "transparency",
+  "version": "0.1.0",
+  "description": "A WebExtension to protect your privacy on the Web",
+  "main": "dist/popup.html",
+  "scripts": {
+    "build": "rm -rf dist/ && mkdir dist/ && cp -R shell/* dist/ && elm-make src/Main.elm --output=dist/app.js",
+    "start": "elm-reactor --port=8080",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "elm": "^0.18.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfeineis/transparency.git"
+  },
+  "keywords": [
+    "webextension",
+    "privacy",
+    "browser",
+    "extension",
+    "elm"
+  ],
+  "author": "Martin Feineis",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/mfeineis/transparency/issues"
+  },
+  "homepage": "https://github.com/mfeineis/transparency#readme"
+}
