@@ -6,7 +6,8 @@
 
     const app = Elm.Main.fullscreen();
 
-    const someValue = chrome.storage.local.get("some-key");
+    //const someValue = chrome.storage.local.get("some-key");
+    //console.log('[POPUP] (someValue ', someValue, ')');
     //storage.local.clear
     //storage.local.get
     //storage.local.remove
@@ -14,7 +15,7 @@
     //storage.sync
 
     chrome.runtime.onConnect.addListener(function (port) {
-        console.log('[POPUP] (someValue ' + someValue + ') chrome.runtime.onConnect', port.name, port, this);
+        console.log('[POPUP] chrome.runtime.onConnect', port.name, port, this);
 
         port.onMessage.addListener(function (msg) {
             console.log("[POPUP] .. port.onMessage", msg);
